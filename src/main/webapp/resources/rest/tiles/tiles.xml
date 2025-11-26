@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Login layout start -->
+	<definition name="login_layout"
+		template="/resources/rest/jsp/login_layout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	
+	<definition name="user-login" extends="login_layout">
+		<put-attribute name="title" value="REST:My Application"></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/login/body.jsp"></put-attribute>
+	</definition>
+
+	<definition name="new-user" extends="login_layout">
+		<put-attribute name="title" value="REST:My Application"></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/login/new-user.jsp"></put-attribute>
+	</definition>
+
+	<definition name="forgot-password" extends="login_layout">
+		<put-attribute name="title" value="REST:My Application"></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/login/forgot-password.jsp"></put-attribute>
+	</definition>
+
+	<definition name="log-off" extends="login_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/loc-screen.jsp"></put-attribute>
+	</definition>
+	<!-- Login layout end -->
+
+	<!-- Admin layout start -->
+	<definition name="admin_layout"
+		template="/resources/rest/jsp/admin_layout.jsp">
+		<put-attribute name="title" value="REST: Welcome.."></put-attribute>
+		<put-attribute name="header"
+			value="/resources/rest/jsp/admin/header.jsp"></put-attribute>
+		<put-attribute name="menu"
+			value="/resources/rest/jsp/admin/menu.jsp"></put-attribute>
+		<put-attribute name="slider"
+			value="/resources/rest/jsp/admin/slider.jsp"></put-attribute>
+		<put-attribute name="footer"
+			value="/resources/rest/jsp/admin/footer.jsp"></put-attribute>
+	</definition>
+	<!-- Admin layout End -->
+	
+	<definition name="reset-password" extends="admin_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/jsp/reset-password.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="dashbord" extends="admin_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/dashbord.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="show-excel" extends="admin_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/jsp/upload-file.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="edit-user-record" extends="admin_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/jsp/update-user-data.jsp"></put-attribute>
+	</definition>
+
+	<definition name="edit-multi-user-record" extends="admin_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/jsp/update-multiuser.jsp"></put-attribute>
+	</definition>
+
+<definition name="show-excel-chart" extends="admin_layout">
+		<put-attribute name="title" value="REST:Home Page.."></put-attribute>
+		<put-attribute name="body"
+			value="/resources/rest/jsp/admin/jsp/upload-excel-chart.jsp"></put-attribute>
+	</definition>
+
+
+</tiles-definitions>

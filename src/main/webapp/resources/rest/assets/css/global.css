@@ -1,0 +1,62 @@
+.content-wrapper {
+    background:#283655!important
+}
+.red{
+	color:#f30000;
+}
+.green{
+	color:#1e9e1e;
+}
+.p-5 {
+    padding: 2rem !important;
+}
+.modal-dialog.errMSG,.modal-dialog.successMSG {
+    width: 250px;
+}
+
+successMSG{
+	max-width:250px!important;
+	margin-top:10rem;
+}
+.successMSG .modal-content{
+	background-color:#e6fbf2!important;
+}
+.modal-content{
+	background-color:#fff
+}
+.errMSG{
+	max-width:250px;
+	margin-top:10rem;
+}
+.errMSG .modal-content{
+	background-color:#ffecec!important;
+}
+.errmsgheading {
+    color: #ed828f;
+    font-weight: 500;
+}
+.auth .auth-form-light select {
+    color: #333;
+}
+@media (max-width: 767px) {
+	.w-100 {
+	    width: 115% !important;
+	}
+	.content-wrapper {
+    padding: 2.75rem 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .p-5 {
+	    padding: 1.5rem!important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .w-100 {
+	    width: 115% !important;
+	}
+	
+}

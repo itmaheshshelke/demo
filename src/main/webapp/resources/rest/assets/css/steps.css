@@ -1,0 +1,211 @@
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+#msform fieldset {
+    background: #FFF!important;
+    padding: 20px 30px;
+	width: 100%;
+	position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input[type='text'], #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+#msform input[type='checkbox']{
+	width:auto;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #D8AA14;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #D8AA14;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+	box-shadow:unset;
+	border:none
+}
+
+#msform .action-button-previous {
+    min-width: 100px;
+    background: #37afff;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+	box-shadow: unset;
+    border: none;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+    margin-left: -4rem;
+    position: absolute;
+	top: 2px;
+    width: 100%;
+}
+.hrline{
+	border: 0.5px solid #929292;
+    width: 78%;
+    margin-top: 18px;
+    margin-bottom: 75px;margin-left:80px
+}
+#progressbar li {
+    list-style-type: none;
+    color: #000;
+	font-weight:bold;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 20%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+.col-md-4, .col-md-2{
+	text-align:left
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    display: block;
+    font-size: 12px;
+    background: #ffffff;
+    border: 3px solid #0b82e0;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+		content:'\2713';
+    background: #8ac7f8;
+    border: 3px solid #0880e0;
+    color: white;
+}
+#progressbar li.active:after {
+	
+}
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #D8AA14;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}
+ul.dtr-details li{
+	width:auto!important;
+	float:left!important;
+	word-wrap:break-work;
+	word-break: break-all;
+	border:1px solid #ddd;
+	padding:5px!important;
+	min-height:80px
+}
+span.dtr-data {
+    min-height: 14px!important;
+}
+.page-body-wrapper {
+    padding-top: 0px!important;
+	display:unset;
+	min-height:100vh!important
+}
+body {
+    background:#e7f2fb!important;
+}
+@media (max-width: 767px) {
+	#progressbar {
+   		margin-left: -1rem;
+	}
+	.hrline {
+		 margin-left: 45px;
+	}
+}
